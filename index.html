@@ -3,162 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nabilah Yusuf - Portofolio Pribadi</title>
-    <!-- Google Fonts & FontAwesome for Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Portofolio - Nabilah Yusuf</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        :root {
-            --primary-color: #6366f1;
-            --primary-dark: #4f46e5;
-            --accent-color: #f43f5e;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --text-muted: #64748b;
-            --border-radius: 12px;
-            --transition: all 0.3s ease;
-        }
-
+        /* CSS RESET & GENERAL STYLES */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
 
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-muted: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
-        /* Navbar */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION BAR */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background-color: var(--white);
+            box-shadow: var(--shadow);
             z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 1rem 2rem;
         }
 
         .logo {
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
-            text-decoration: none;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
             list-style: none;
             gap: 1.5rem;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-color);
+        .nav-links a {
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
+            transition: color 0.3s;
         }
 
-        nav ul li a:hover {
-            color: var(--primary-color);
+        .nav-links a:hover {
+            color: var(--accent-color);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 10rem 5% 5rem;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4rem;
-            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        .hero-content h1 span {
-            color: var(--primary-color);
-        }
-
-        .hero-content p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .hero-image img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
-            border: 4px solid #fff;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Sections General */
+        /* SECTIONS GENERAL */
         section {
-            padding: 5rem 5%;
+            padding: 5rem 2rem 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -166,252 +90,309 @@
         .section-title {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
             position: relative;
         }
 
         .section-title::after {
             content: '';
-            display: block;
-            width: 50px;
+            width: 60px;
             height: 4px;
-            background: var(--primary-color);
-            margin: 0.5rem auto 0;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 8px auto 0;
             border-radius: 2px;
         }
 
-        /* About Section */
-        .about-grid {
+        /* HERON / BERANDA */
+        #beranda {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            gap: 2rem;
+            padding-top: 6rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border: 5px solid var(--white);
+            background-color: #e0e0e0;
+        }
+
+        /* TENTANG SAYA */
+        .tentang-content {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .hobi-grid, .organisasi-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            margin-bottom: 1.5rem;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
         }
 
-        .card h3 {
-            margin-bottom: 1rem;
+        .card h4 {
+            margin-bottom: 0.5rem;
             color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .hobby-list, .org-list {
-            list-style: none;
-        }
-
-        .hobby-list li, .org-list li {
-            margin-bottom: 1rem;
-        }
-
-        .hobby-list strong, .org-list strong {
-            color: var(--text-color);
-        }
-
-        /* CV Section */
+        /* CV & SKILLS */
         .cv-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
-        .timeline-item {
-            position: relative;
-            padding-left: 1.5rem;
-            border-left: 2px solid var(--primary-color);
-            margin-bottom: 1.5rem;
+        .skills-list {
+            list-style: none;
         }
 
-        .skill-tags {
+        .skills-list li {
+            padding: 0.8rem;
+            background: var(--white);
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            align-items: center;
+            gap: 10px;
         }
 
-        .skill-tag {
-            background: #e0e7ff;
-            color: var(--primary-dark);
-            padding: 0.4rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Achievements Section */
-        .achievements-grid {
+        /* HASIL KARYA & PRESTASI */
+        .prestasi-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
         }
 
-        .achievement-card {
-            background: var(--card-bg);
+        .prestasi-card {
+            background: var(--white);
             padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
             text-align: center;
-            transition: var(--transition);
+            transition: transform 0.3s;
         }
 
-        .achievement-card:hover {
+        .prestasi-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
         }
 
-        .achievement-card i {
+        .prestasi-icon {
             font-size: 2.5rem;
-            color: #f59e0b;
             margin-bottom: 1rem;
+            color: var(--accent-color);
         }
 
-        /* Gallery Section */
-        .gallery-grid {
+        /* GALERI GALERI */
+        .galeri-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .galeri-category h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        .galeri-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.2rem;
         }
 
-        .gallery-item {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            background: #1e293b;
-            cursor: pointer;
-            height: 220px;
+        .galeri-card-item {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-            opacity: 0.9;
+        .galeri-card-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            color: white;
-            font-size: 0.85rem;
+        .galeri-card-item p {
+            font-size: 0.95rem;
             font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
-        /* Testimonials */
-        .testimonial-grid {
+        .btn-drive {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-drive:hover {
+            background-color: #2980b9;
+        }
+
+        /* TESTIMONI */
+        .testimoni-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .testimonial-card {
-            background: var(--card-bg);
+        .testimoni-card {
+            background: var(--white);
             padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
             font-style: italic;
             position: relative;
         }
 
-        .testimonial-card::before {
-            content: '\201C';
-            font-size: 4rem;
-            color: #e0e7ff;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            z-index: 0;
-            line-height: 1;
-        }
-
-        .testimonial-card p {
-            position: relative;
-            z-index: 1;
+        .testimoni-card p {
             margin-bottom: 1rem;
-            color: var(--text-color);
         }
 
-        .testimonial-author {
+        .testimoni-author {
             font-style: normal;
             font-weight: 600;
-            color: var(--primary-dark);
-            font-size: 0.9rem;
+            color: var(--accent-color);
+            text-align: right;
         }
 
-        /* Contact Section & Footer */
-        .contact-section {
-            background: #1e293b;
-            color: white;
+        /* KONTAK & FOOTER */
+        #kontak {
             text-align: center;
-            padding: 4rem 5%;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .social-links a {
+        .social-btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.25rem;
-            text-decoration: none;
-            transition: var(--transition);
+            gap: 10px;
+            background: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            font-weight: 600;
+            transition: transform 0.3s;
         }
 
-        .social-links a:hover {
-            background: var(--primary-color);
+        .social-btn:hover {
             transform: translateY(-3px);
         }
 
         footer {
+            background-color: var(--primary-color);
+            color: var(--white);
             text-align: center;
             padding: 1.5rem;
-            background: #0f172a;
-            color: #94a3b8;
-            font-size: 0.85rem;
+            margin-top: 3rem;
         }
 
-        /* Responsive */
-        @media(max-width: 768px) {
-            .hero {
+        @media (max-width: 768px) {
+            #beranda {
                 flex-direction: column-reverse;
                 text-align: center;
                 padding-top: 8rem;
             }
-            .btn-group {
+
+            .hero-buttons {
                 justify-content: center;
             }
-            .about-grid, .cv-grid {
+
+            .cv-grid {
                 grid-template-columns: 1fr;
             }
-            nav ul {
+
+            .nav-links {
                 display: none;
             }
         }
@@ -419,235 +400,185 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- NAVIGASI -->
     <header>
-        <a href="#" class="logo">Nabilah Yusuf</a>
         <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
+            <div class="logo">Nabilah Yusuf</div>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
                 <li><a href="#cv">CV</a></li>
-                <li><a href="#achievements">Prestasi</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#prestasi">Prestasi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#kontak">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 1. Beranda -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Halo, selamat datang!<br>Saya <span>Nabilah Yusuf</span></h1>
-            <p>Siswa yang sangat aktif dan antusias di dalam pelajaran Manajemen Perkantoran, Teknologi Perkantoran, serta Bahasa & Public Speaking. Saya selalu bersemangat untuk mempelajari hal-hal baru, mengasah keterampilan diri, dan berkontribusi aktif dalam berbagai kegiatan organisasi maupun akademis.</p>
-            <div class="btn-group">
-                <a href="#achievements" class="btn btn-primary"><i class="fas fa-trophy"></i> Lihat Karya Saya</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Hubungi Saya</a>
+    <!-- 1. BERANDA -->
+    <section id="beranda">
+        <div class="hero-text">
+            <h1>Halo, Selamat Datang!</h1>
+            <p>Saya <strong>Nabilah Yusuf</strong>, siswa yang sangat aktif dan antusias di dalam pelajaran Manajemen Perkantoran, Teknologi Perkantoran, serta Bahasa & Public Speaking. Saya selalu bersemangat untuk mempelajari hal-hal baru, mengasah keterampilan diri, dan berkontribusi aktif dalam berbagai kegiatan organisasi maupun akademis.</p>
+            <div class="hero-buttons">
+                <a href="#prestasi" class="btn btn-primary">Lihat Karya Saya</a>
+                <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://lh3.googleusercontent.com/d/1JMI9-kJjYw_uGCReFwSoE8B4zVrCL7kK" alt="Foto Profil Nabilah Yusuf">
+            <!-- PENTING: Simpan file foto Anda dengan nama 'foto-profil.jpg' di folder yang sama -->
+            <img src="foto-profil.jpg" alt="Foto Profil Nabilah Yusuf" class="profile-img">
         </div>
     </section>
 
-    <!-- 2. Tentang Saya -->
-    <section id="about">
+    <!-- 2. TENTANG SAYA -->
+    <section id="tentang">
         <h2 class="section-title">Mengenal Lebih Dekat</h2>
-        <div class="about-grid">
-            <div class="card">
-                <h3><i class="fas fa-user-graduate"></i> Profil Singkat</h3>
-                <p>Saat ini saya adalah siswa aktif di <strong>SMKN 42 Jakarta</strong> (Jurusan Manajemen Perkantoran) dan merupakan alumni dari <strong>SMP Darul Izzah</strong>.</p>
-                <p style="margin-top: 1rem;">Saya percaya bahwa keseimbangan antara pendidikan, kedisiplinan organisasi, seni, dan wawasan adalah kunci utama dalam pengembangan diri.</p>
-                
-                <h3 style="margin-top: 2rem;"><i class="fas fa-heart"></i> Hobi & Minat</h3>
-                <ul class="hobby-list">
-                    <li>🥋 <strong>Pencak Silat:</strong> Melatih kedisiplinan, fokus, ketahanan mental, dan fisik.</li>
-                    <li>📖 <strong>Membaca Puisi & Public Speaking:</strong> Wadah mengekspresikan seni, olah vokal, dan keberanian tampil di hadapan publik.</li>
-                    <li>📚 <strong>Membaca (Novel & Non-Fiksi):</strong> Memperluas wawasan, imajinasi, dan menambah pengetahuan baru secara mandiri.</li>
-                    <li>🍳 <strong>Memasak:</strong> Menyalurkan kreativitas dan bereksperimen dengan resep-resep makanan di waktu senggang.</li>
-                </ul>
+        <div class="tentang-content">
+            <p>Saat ini saya adalah siswa aktif di <strong>SMKN 42 Jakarta (Jurusan Manajemen Perkantoran)</strong> dan merupakan alumni dari <strong>SMP Darul Izzah</strong>. Saya percaya bahwa keseimbangan antara pendidikan, kedisiplinan organisasi, seni, dan wawasan adalah kunci utama dalam pengembangan diri.</p>
+            
+            <h3 style="margin-top: 2rem; color: var(--primary-color);">Hobi & Minat</h3>
+            <div class="hobi-grid">
+                <div class="card">
+                    <h4>🥋 Pencak Silat</h4>
+                    <p>Melatih kedisiplinan, fokus, ketahanan mental, dan fisik.</p>
+                </div>
+                <div class="card">
+                    <h4>📖 Membaca Puisi & Public Speaking</h4>
+                    <p>Wadah mengekspresikan seni, olah vokal, dan keberanian tampil di hadapan publik.</p>
+                </div>
+                <div class="card">
+                    <h4>📚 Membaca (Novel & Non-Fiksi)</h4>
+                    <p>Memperluas wawasan, imajinasi, dan menambah pengetahuan baru secara mandiri.</p>
+                </div>
+                <div class="card">
+                    <h4>🍳 Memasak</h4>
+                    <p>Menyalurkan kreativitas dan bereksperimen dengan resep-resep makanan di waktu senggang.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-users-cog"></i> Pengalaman Organisasi</h3>
-                <ul class="org-list">
-                    <li>
-                        🥋 <strong>Ekstrakurikuler Pencak Silat SMKN 42 Jakarta</strong><br>
-                        <span style="color: var(--text-muted);">Aktif mengikuti latihan, kegiatan pengembangan diri, serta berkontribusi dalam kepengurusan ekstrakurikuler di sekolah.</span>
-                    </li>
-                    <li style="margin-top: 1.25rem;">
-                        📝 🥋 <strong>Sekretaris – Pencak Silat Perguruan APSN</strong><br>
-                        <span style="color: var(--text-muted);">Bertanggung jawab dalam mengelola administrasi, penyusunan dokumen, pencatatan kegiatan, serta mendukung kelancaran operasional organisasi Perguruan APSN.</span>
-                    </li>
-                    <li style="margin-top: 1.25rem;">
-                        🧹 <strong>Pengurus OSIS – Bidang Kebersihan & Lingkungan</strong><br>
-                        <span style="color: var(--text-muted);">Bertanggung jawab dalam menjaga kebersihan, kerapian, serta membangun kedisiplinan dan kesadaran lingkungan di sekolah.</span>
-                    </li>
-                </ul>
+            <h3 style="margin-top: 2rem; color: var(--primary-color);">Pengalaman Organisasi</h3>
+            <div class="organisasi-grid">
+                <div class="card">
+                    <h4>🥋 Ekstrakurikuler Pencak Silat SMKN 42 Jakarta</h4>
+                    <p>Aktif mengikuti latihan, kegiatan pengembangan diri, serta berkontribusi dalam kepengurusan ekstrakurikuler di sekolah.</p>
+                </div>
+                <div class="card">
+                    <h4>📝 Sekretaris – Pencak Silat Perguruan APSN</h4>
+                    <p>Bertanggung jawab dalam mengelola administrasi, penyusunan dokumen, pencatatan kegiatan, serta mendukung kelancaran operasional organisasi Perguruan APSN.</p>
+                </div>
+                <div class="card">
+                    <h4>🧹 Pengurus OSIS – Bidang Kebersihan & Lingkungan</h4>
+                    <p>Bertanggung jawab dalam menjaga kebersihan, kerapian, serta membangun kedisiplinan dan kesadaran lingkungan di sekolah.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Curriculum Vitae (CV) -->
-    <section id="cv" style="background: #ffffff; border-radius: 20px; margin: 2rem auto; box-shadow: 0 4px 25px rgba(0,0,0,0.02);">
+    <!-- 3. CURRICULUM VITAE (CV) -->
+    <section id="cv">
         <h2 class="section-title">Curriculum Vitae (CV)</h2>
         <div class="cv-grid">
             <div>
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);"><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h3>
-                <div class="timeline-item">
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h3>
+                <div class="card" style="margin-bottom: 1rem;">
                     <h4>SMKN 42 Jakarta</h4>
-                    <p style="color: var(--primary-dark); font-weight: 500;">Manajemen Perkantoran (Siswa Aktif)</p>
+                    <p>Manajemen Perkantoran (Siswa Aktif)</p>
                 </div>
-                <div class="timeline-item">
+                <div class="card">
                     <h4>SMP Darul Izzah</h4>
-                    <p style="color: var(--primary-dark); font-weight: 500;">Alumni</p>
+                    <p>Alumni</p>
                 </div>
             </div>
             <div>
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);"><i class="fas fa-tools"></i> Keterampilan (Skills)</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Manajemen & Administrasi Perkantoran (Pengarsipan & Surat-menyurat)</span>
-                    <span class="skill-tag">Public Speaking & Seni Pertunjukan (Puisi & Pidato)</span>
-                    <span class="skill-tag">Kepemimpinan & Manajemen Organisasi</span>
-                    <span class="skill-tag">Kedisiplinan & Kerja Sama Tim</span>
-                    <span class="skill-tag">Olahraga Bela Diri (Pencak Silat)</span>
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-star"></i> Keterampilan (Skills)</h3>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Manajemen & Administrasi Perkantoran (Pengarsipan & Surat-menyurat)</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Public Speaking & Seni Pertunjukan (Puisi & Pidato)</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Kepemimpinan & Manajemen Organisasi</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Kedisiplinan & Kerja Sama Tim</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Olahraga Bela Diri (Pencak Silat)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HASIL KARYA & PRESTASI -->
+    <section id="prestasi">
+        <h2 class="section-title">Pencapaian & Prestasi Utama</h2>
+        <div class="prestasi-grid">
+            <div class="prestasi-card">
+                <div class="prestasi-icon">🥇</div>
+                <h3>Juara 1 Lomba Baca Puisi (Offline)</h3>
+                <p>Penghargaan atas kemampuan penghayatan, olah vokal, dan penjiwaan ekspresi seni secara langsung di atas panggung.</p>
+            </div>
+            <div class="prestasi-card">
+                <div class="prestasi-icon">🏆</div>
+                <h3>Juara 1 Lomba Baca Puisi (Online)</h3>
+                <p>Pencapaian dalam menyampaikan estetika sastra dan ekspresi emosional secara optimal melalui media digital.</p>
+            </div>
+            <div class="prestasi-card">
+                <div class="prestasi-icon">🎖️</div>
+                <h3>Juara Harapan 1 Lomba Pidato</h3>
+                <p>Prestasi dalam bidang public speaking, penyampaian ide gagasan secara terstruktur, dan kemampuan persuasi di depan umum.</p>
+            </div>
+            <div class="prestasi-card">
+                <div class="prestasi-icon">👑</div>
+                <h3>Juara 1 Lomba Fashion Show</h3>
+                <p>Tingkat Antar-RW. Menunjukkan rasa percaya diri, kreativitas gaya berbusana, dan penampilan publik di lingkungan masyarakat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALERI FOTO & DOKUMENTASI -->
+    <section id="galeri">
+        <h2 class="section-title">Galeri Foto & Dokumentasi</h2>
+
+        <!-- Pencak Silat APSN -->
+        <div class="galeri-category">
+            <h3>Dokumentasi Foto Bersama Pencak Silat APSN</h3>
+            <div class="galeri-grid">
+                <div class="galeri-card-item">
+                    <i class="fas fa-image"></i>
+                    <p>Dokumentasi APSN 1</p>
+                    <a href="https://drive.google.com/file/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                </div>
+                <div class="galeri-card-item">
+                    <i class="fas fa-image"></i>
+                    <p>Dokumentasi APSN 2</p>
+                    <a href="https://drive.google.com/file/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                </div>
+                <div class="galeri-card-item">
+                    <i class="fas fa-image"></i>
+                    <p>Dokumentasi APSN 3</p>
+                    <a href="https://drive.google.com/file/d/1xShev3wrznotrr45YnbX3kZWinib9c_a/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                </div>
+                <div class="galeri-card-item">
+                    <i class="fas fa-image"></i>
+                    <p>Dokumentasi APSN 4</p>
+                    <a href="https://drive.google.com/file/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- 4. Hasil Karya & Prestasi -->
-    <section id="achievements">
-        <h2 class="section-title">Pencapaian & Prestasi Utama</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <i class="fas fa-medal"></i>
-                <h3>Juara 1 Lomba Baca Puisi</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">(Offline / Tampil Langsung) — Penghargaan atas kemampuan penghayatan, olah vokal, dan penjiwaan ekspresi seni secara langsung di atas panggung.</p>
-            </div>
-            <div class="achievement-card">
-                <i class="fas fa-trophy"></i>
-                <h3>Juara 1 Lomba Baca Puisi</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">(Online / Daring) — Pencapaian dalam menyampaikan estetika sastra dan ekspresi emosional secara optimal melalui media digital.</p>
-            </div>
-            <div class="achievement-card">
-                <i class="fas fa-award"></i>
-                <h3>Juara Harapan 1 Lomba Pidato</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Prestasi dalam bidang public speaking, penyampaian ide gagasan secara terstruktur, dan kemampuan persuasi di depan umum.</p>
-            </div>
-            <div class="achievement-card">
-                <i class="fas fa-crown"></i>
-                <h3>Juara 1 Lomba Fashion Show</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">(Tingkat Antar-RW) — Menunjukkan rasa percaya diri, kreativitas gaya berbusana, dan penampilan publik di lingkungan masyarakat.</p>
+        <!-- Eskul Pencak Silat SMKN 42 -->
+        <div class="galeri-category">
+            <h3>Dokumentasi Foto Eskul Pencak Silat SMKN 42</h3>
+            <div class="galeri-grid">
+                <div class="galeri-card-item">
+                    <i class="fas fa-users"></i>
+                    <p>Eskul Silat SMKN 42</p>
+                    <a href="https://drive.google.com/file/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- 5. Galeri Foto & Video -->
-    <section id="gallery" style="background: #ffffff; border-radius: 20px; margin: 2rem auto; box-shadow: 0 4px 25px rgba(0,0,0,0.02);">
-        <h2 class="section-title">Galeri Foto & Dokumentasi</h2>
-        <div class="gallery-grid">
-            
-            <!-- Dokumentasi Pencak Silat APSN -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA" alt="Pencak Silat APSN 1">
-                <div class="gallery-caption">Dokumentasi Bersama Pencak Silat APSN</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE" alt="Pencak Silat APSN 2">
-                <div class="gallery-caption">Dokumentasi Bersama Pencak Silat APSN</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1xShev3wrznotrr45YnbX3kZWinib9c_a" alt="Pencak Silat APSN 3">
-                <div class="gallery-caption">Dokumentasi Bersama Pencak Silat APSN</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi" alt="Pencak Silat APSN 4">
-                <div class="gallery-caption">Dokumentasi Bersama Pencak Silat APSN</div>
-            </div>
-
-            <!-- Dokumentasi Eskul Pencak Silat SMKN 42 -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl" alt="Eskul Pencak Silat SMKN 42">
-                <div class="gallery-caption">Dokumentasi Eskul Pencak Silat SMKN 42</div>
-            </div>
-
-            <!-- Dokumentasi OSIS -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO" alt="Dokumentasi OSIS 1">
-                <div class="gallery-caption">Dokumentasi OSIS</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1cdRrZSUCjT93bGfN1rbarfhHn09LsSqe" alt="Dokumentasi OSIS 2">
-                <div class="gallery-caption">Dokumentasi OSIS</div>
-            </div>
-
-            <!-- Juara 1 Lomba Baca Puisi & Dokumentasi Saat Baca Puisi -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1XMpbexgpURlJD8Me66oRdEWR_Z2E8fWh" alt="Juara 1 Lomba Baca Puisi 1">
-                <div class="gallery-caption">Juara 1 Lomba Baca Puisi</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1modz2bH25oxAQmEOgRj_BtTaSsftPO3t" alt="Juara 1 Lomba Baca Puisi 2">
-                <div class="gallery-caption">Juara 1 Lomba Baca Puisi</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/12sUyH-noqTlRlnD-AE4Y1bnSgP9Nsl2j" alt="Dokumentasi Baca Puisi">
-                <div class="gallery-caption">Dokumentasi Saat Baca Puisi</div>
-            </div>
-
-            <!-- Juara Harapan 1 Pidato -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1-rAfrlOsrzwY8-CIduY4fx0Y4XEP0Xwe" alt="Juara Harapan 1 Pidato">
-                <div class="gallery-caption">Juara Harapan 1 Lomba Pidato</div>
-            </div>
-
-            <!-- Juara 1 Fashion Show -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1LOVR3jq_VrEidcAs3L2ijLTKaYmGT0Un" alt="Fashion Show">
-                <div class="gallery-caption">Juara 1 Lomba Fashion Show Antar-RW</div>
-            </div>
-
-            <!-- LKBBI 2025 -->
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1Www7pzsI7ke0mPlUFZkJ0Qt5o9tmjAtH" alt="LKBBI 2025">
-                <div class="gallery-caption">Partisipasi Lomba LKBBI 2025</div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 6. Testimoni -->
-    <section id="testimonials">
-        <h2 class="section-title">Testimoni</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"Nabilah adalah sosok siswa yang sangat rajin, berdedikasi tinggi, dan bertanggung jawab. Keaktifannya di organisasi, baik sebagai sekretaris maupun pengurus OSIS, serta prestasinya di bidang seni dan public speaking sangat menginspirasi."</p>
-                <div class="testimonial-author">— Rekan / Guru</div>
-            </div>
-            <div class="testimonial-card">
-                <p>"Nabilah adalah sosok yang inspiratif, cekatan, dan penuh semangat. Sebagai sekretaris sekaligus sesama anggota, ia mampu menyeimbangkan kerja keras saat latihan fisik dengan ketelitian dalam mengurus segala kebutuhan organisasi. Kehadirannya selalu memberikan energi positif bagi seluruh tim."</p>
-                <div class="testimonial-author">— Pembina / Pelatih Pencak Silat APSN</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Media Sosial & Kontak / Footer -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title" style="color: white;">Mari Terhubung Bersama Saya</h2>
-        <p>Tertarik berkolaborasi atau ingin mengenal lebih jauh? Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.</p>
-        
-        <div class="social-links">
-            <a href="https://instagram.com/biyaxy" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@nby_core" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/6287730724691" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        
-        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 1rem;"><i class="fas fa-phone-alt"></i> WhatsApp: +62 877-3072-4691</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Nabilah Yusuf. Hak Cipta Dilindungi.</p>
-    </footer>
-
-</body>
-</html>
+        <!-- Dokumentasi OSIS -->
+        <div class="galeri-category">
+            <h3>Dokumentasi OSIS</h3>
+            <div class="galeri-grid">
+                <div class="galeri-card-item">
+                    <i class="fas fa-user-friends"></i>
+                    <p>Dokumentasi OSIS 1</p>
+                    <a href="https://drive.google.com/file/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
