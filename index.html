@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* CSS RESET & GENERAL STYLES */
         * {
             margin: 0;
             padding: 0;
@@ -80,7 +79,7 @@
             color: var(--accent-color);
         }
 
-        /* SECTIONS GENERAL */
+        /* SECTIONS */
         section {
             padding: 5rem 2rem 3rem 2rem;
             max-width: 1200px;
@@ -105,7 +104,7 @@
             border-radius: 2px;
         }
 
-        /* HERON / BERANDA */
+        /* BERANDA */
         #beranda {
             display: flex;
             align-items: center;
@@ -230,7 +229,7 @@
             gap: 10px;
         }
 
-        /* HASIL KARYA & PRESTASI */
+        /* PRESTASI */
         .prestasi-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -256,7 +255,7 @@
             color: var(--accent-color);
         }
 
-        /* GALERI GALERI */
+        /* GALERI FOTO */
         .galeri-category {
             margin-bottom: 2.5rem;
         }
@@ -274,43 +273,37 @@
             gap: 1.2rem;
         }
 
-        .galeri-card-item {
+        .galeri-item {
+            position: relative;
             background: var(--white);
             border-radius: 10px;
-            padding: 1.2rem;
+            overflow: hidden;
             box-shadow: var(--shadow);
+            height: 200px;
+            transition: transform 0.3s;
+        }
+
+        .galeri-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .galeri-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .galeri-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 8px;
+            font-size: 0.8rem;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .galeri-card-item i {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 0.8rem;
-        }
-
-        .galeri-card-item p {
-            font-size: 0.95rem;
             font-weight: 500;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .btn-drive {
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .btn-drive:hover {
-            background-color: #2980b9;
         }
 
         /* TESTIMONI */
@@ -427,8 +420,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <!-- PENTING: Simpan file foto Anda dengan nama 'foto-profil.jpg' di folder yang sama -->
-            <img src="foto-profil.jpg" alt="Foto Profil Nabilah Yusuf" class="profile-img">
+            <img src="https://lh3.googleusercontent.com/d/1JMI9-kJjYw_uGCReFwSoE8B4zVrCL7kK" alt="Foto Profil Nabilah Yusuf" class="profile-img">
         </div>
     </section>
 
@@ -531,7 +523,7 @@
         </div>
     </section>
 
-    <!-- 5. GALERI FOTO & DOKUMENTASI -->
+    <!-- 5. GALERI FOTO & VIDEO -->
     <section id="galeri">
         <h2 class="section-title">Galeri Foto & Dokumentasi</h2>
 
@@ -539,37 +531,42 @@
         <div class="galeri-category">
             <h3>Dokumentasi Foto Bersama Pencak Silat APSN</h3>
             <div class="galeri-grid">
-                <div class="galeri-card-item">
-                    <i class="fas fa-image"></i>
-                    <p>Dokumentasi APSN 1</p>
-                    <a href="https://drive.google.com/file/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA" alt="APSN 1">
+                        <div class="galeri-caption">Dokumentasi APSN 1</div>
+                    </a>
                 </div>
-                <div class="galeri-card-item">
-                    <i class="fas fa-image"></i>
-                    <p>Dokumentasi APSN 2</p>
-                    <a href="https://drive.google.com/file/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE" alt="APSN 2">
+                        <div class="galeri-caption">Dokumentasi APSN 2</div>
+                    </a>
                 </div>
-                <div class="galeri-card-item">
-                    <i class="fas fa-image"></i>
-                    <p>Dokumentasi APSN 3</p>
-                    <a href="https://drive.google.com/file/d/1xShev3wrznotrr45YnbX3kZWinib9c_a/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1xShev3wrznotrr45YnbX3kZWinib9c_a/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1xShev3wrznotrr45YnbX3kZWinib9c_a" alt="APSN 3">
+                        <div class="galeri-caption">Dokumentasi APSN 3</div>
+                    </a>
                 </div>
-                <div class="galeri-card-item">
-                    <i class="fas fa-image"></i>
-                    <p>Dokumentasi APSN 4</p>
-                    <a href="https://drive.google.com/file/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi" alt="Sparing">
+                        <div class="galeri-caption">Sparing</div>
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Eskul Pencak Silat SMKN 42 -->
         <div class="galeri-category">
-            <h3>Dokumentasi Foto Eskul Pencak Silat SMKN 42</h3>
+            <h3>Dokumentasi Foto bersama eskul pencak silat SMKN 42</h3>
             <div class="galeri-grid">
-                <div class="galeri-card-item">
-                    <i class="fas fa-users"></i>
-                    <p>Eskul Silat SMKN 42</p>
-                    <a href="https://drive.google.com/file/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl" alt="Eskul SMKN 42">
+                        <div class="galeri-caption">Eskul Pencak Silat SMKN 42</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -578,7 +575,10 @@
         <div class="galeri-category">
             <h3>Dokumentasi OSIS</h3>
             <div class="galeri-grid">
-                <div class="galeri-card-item">
-                    <i class="fas fa-user-friends"></i>
-                    <p>Dokumentasi OSIS 1</p>
-                    <a href="https://drive.google.com/file/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO/view?usp=drivesdk" target="_blank" class="btn-drive"><i class="fab fa-google-drive"></i> Buka Foto</a>
+                <div class="galeri-item">
+                    <a href="https://drive.google.com/file/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO/view?usp=drivesdk" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO" alt="OSIS 1">
+                        <div class="galeri-caption">Dokumentasi OSIS 1</div>
+                    </a>
+                </div>
+                <d
