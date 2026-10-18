@@ -1,283 +1,89 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Nabilah Yusuf</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    </style>
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#beranda" class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                Nabilah Yusuf
-            </a>
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="#beranda" class="hover:text-indigo-600 transition">Beranda</a>
-                <a href="#tentang" class="hover:text-indigo-600 transition">Tentang</a>
-                <a href="#cv" class="hover:text-indigo-600 transition">CV</a>
-                <a href="#prestasi" class="hover:text-indigo-600 transition">Prestasi</a>
-                <a href="#galeri" class="hover:text-indigo-600 transition">Galeri</a>
-                <a href="#kontak" class="hover:text-indigo-600 transition">Kontak</a>
+            <a href="#beranda" class="text-xl font-bold text-indigo-600">Nabilah Yusuf</a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
+                <a href="#beranda" class="hover:text-indigo-600">Beranda</a>
+                <a href="#tentang" class="hover:text-indigo-600">Tentang</a>
+                <a href="#cv" class="hover:text-indigo-600">CV</a>
+                <a href="#prestasi" class="hover:text-indigo-600">Prestasi</a>
+                <a href="#galeri" class="hover:text-indigo-600">Galeri</a>
+                <a href="#kontak" class="hover:text-indigo-600">Kontak</a>
             </nav>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none text-xl">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-        <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3 text-sm font-medium">
-            <a href="#beranda" class="block hover:text-indigo-600">Beranda</a>
-            <a href="#tentang" class="block hover:text-indigo-600">Tentang</a>
-            <a href="#cv" class="block hover:text-indigo-600">CV</a>
-            <a href="#prestasi" class="block hover:text-indigo-600">Prestasi</a>
-            <a href="#galeri" class="block hover:text-indigo-600">Galeri</a>
-            <a href="#kontak" class="block hover:text-indigo-600">Kontak</a>
         </div>
     </header>
 
-    <!-- 1. Beranda Section -->
-    <section id="beranda" class="py-20 md:py-28 overflow-hidden bg-gradient-to-b from-indigo-50/50 to-white">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Beranda -->
+    <section id="beranda" class="py-20 bg-gradient-to-b from-indigo-50 to-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             <div class="space-y-6">
-                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold tracking-wide uppercase">
-                    <i class="fa-solid fa-sparkles"></i> Siswa Manajemen Perkantoran
-                </span>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                    Halo, selamat datang! <br>
-                    Saya <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Nabilah Yusuf</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase">Siswa Manajemen Perkantoran</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                    Halo, selamat datang! <br>Saya <span class="text-indigo-600">Nabilah Yusuf</span>
                 </h1>
-                <p class="text-slate-600 text-base md:text-lg leading-relaxed">
-                    Siswa yang sangat aktif dan antusias di dalam pelajaran Manajemen Perkantoran, Teknologi Perkantoran, serta Bahasa & Public Speaking. Selalu bersemangat untuk mempelajari hal-hal baru, mengasah keterampilan diri, dan berkontribusi aktif dalam berbagai kegiatan organisasi maupun akademis.
+                <p class="text-slate-600 leading-relaxed">
+                    Siswa yang sangat aktif dan antusias di dalam pelajaran Manajemen Perkantoran, Teknologi Perkantoran, serta Bahasa & Public Speaking. Selalu bersemangat untuk mempelajari hal-hal baru dan berkontribusi aktif dalam kegiatan organisasi maupun akademis.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#prestasi" class="px-6 py-3.5 rounded-xl bg-indigo-600 text-white font-medium shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition flex items-center gap-2">
-                        <i class="fa-solid fa-trophy"></i> Lihat Karya Saya
-                    </a>
-                    <a href="#kontak" class="px-6 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 transition flex items-center gap-2">
-                        <i class="fa-solid fa-envelope"></i> Hubungi Saya
-                    </a>
+                <div class="flex gap-4">
+                    <a href="#prestasi" class="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700">Lihat Karya Saya</a>
+                    <a href="#kontak" class="px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50">Hubungi Saya</a>
                 </div>
             </div>
-            <!-- Foto Profil -->
             <div class="flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-indigo-100">
-                    <img src="https://lh3.googleusercontent.com/d/1JMI9-kJjYw_uGCReFwSoE8B4zVrCL7kK=s800" alt="Foto Profil Nabilah Yusuf" class="w-full h-full object-cover">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl bg-indigo-100 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/d/1JMI9-kJjYw_uGCReFwSoE8B4zVrCL7kK=s800" alt="Nabilah Yusuf" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500';">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. Tentang Saya Section -->
+    <!-- Tentang Saya -->
     <section id="tentang" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
             <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Mengenal Lebih Dekat</h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">Saat ini saya adalah siswa aktif di SMKN 42 Jakarta (Jurusan Manajemen Perkantoran) dan merupakan alumni dari SMP Darul Izzah. Saya percaya bahwa keseimbangan antara pendidikan, kedisiplinan organisasi, seni, dan wawasan adalah kunci utama dalam pengembangan diri.</p>
+                <h2 class="text-3xl font-bold text-slate-900">Mengenal Lebih Dekat</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Siswa aktif di SMKN 42 Jakarta (Jurusan Manajemen Perkantoran) dan alumni SMP Darul Izzah.</p>
             </div>
-
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Hobi & Minat -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-6">
-                    <h3 class="text-xl font-semibold text-slate-900 flex items-center gap-2.5">
-                        <i class="fa-solid fa-heart text-indigo-600"></i> Hobi & Minat
-                    </h3>
-                    <ul class="space-y-4 text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">🥋</span>
-                            <div><strong class="text-slate-800">Pencak Silat:</strong> Melatih kedisiplinan, fokus, ketahanan mental, dan fisik.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">📖</span>
-                            <div><strong class="text-slate-800">Membaca Puisi & Public Speaking:</strong> Wadah mengekspresikan seni, olah vokal, dan keberanian tampil di hadapan publik.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">📚</span>
-                            <div><strong class="text-slate-800">Membaca (Novel & Non-Fiksi):</strong> Memperluas wawasan, imajinasi, dan menambah pengetahuan baru secara mandiri.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">🍳</span>
-                            <div><strong class="text-slate-800">Memasak:</strong> Menyalurkan kreativitas dan bereksperimen dengan resep-resep makanan di waktu senggang.</div>
-                        </li>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-4">
+                    <h3 class="text-xl font-semibold text-slate-900"><i class="fa-solid fa-heart text-indigo-600 mr-2"></i> Hobi & Minat</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li>🥋 <strong>Pencak Silat:</strong> Melatih kedisiplinan dan ketahanan mental.</li>
+                        <li>📖 <strong>Membaca Puisi & Public Speaking:</strong> Wadah mengekspresikan seni dan keberanian tampil di publik.</li>
+                        <li>📚 <strong>Membaca:</strong> Memperluas wawasan dan menambah pengetahuan mandiri.</li>
+                        <li>🍳 <strong>Memasak:</strong> Menyalurkan kreativitas di waktu senggang.</li>
                     </ul>
                 </div>
-
-                <!-- Pengalaman Organisasi -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-6">
-                    <h3 class="text-xl font-semibold text-slate-900 flex items-center gap-2.5">
-                        <i class="fa-solid fa-users-rectangle text-indigo-600"></i> Pengalaman Organisasi
-                    </h3>
-                    <ul class="space-y-4 text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">🥋</span>
-                            <div><strong class="text-slate-800">Ekstrakurikuler Pencak Silat SMKN 42 Jakarta:</strong> Aktif mengikuti latihan, kegiatan pengembangan diri, serta berkontribusi dalam kepengurusan ekstrakurikuler di sekolah.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">📝</span>
-                            <div><strong class="text-slate-800">Sekretaris – Pencak Silat Perguruan APSN:</strong> Bertanggung jawab dalam mengelola administrasi, penyusunan dokumen, pencatatan kegiatan, serta mendukung kelancaran operasional organisasi.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-xl">🧹</span>
-                            <div><strong class="text-slate-800">Pengurus OSIS – Bidang Kebersihan & Lingkungan:</strong> Bertanggung jawab dalam menjaga kebersihan, kerapian, serta membangun kedisiplinan dan kesadaran lingkungan di sekolah.</div>
-                        </li>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-4">
+                    <h3 class="text-xl font-semibold text-slate-900"><i class="fa-solid fa-users text-indigo-600 mr-2"></i> Organisasi</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li>🥋 <strong>Ekstrakurikuler Pencak Silat SMKN 42 Jakarta:</strong> Aktif mengikuti latihan dan pengembangan diri.</li>
+                        <li>📝 <strong>Sekretaris – Pencak Silat Perguruan APSN:</strong> Mengelola administrasi dan dokumentasi kegiatan.</li>
+                        <li>🧹 <strong>Pengurus OSIS – Bidang Kebersihan & Lingkungan:</strong> Menjaga kedisiplinan lingkungan sekolah.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Curriculum Vitae (CV) -->
+    <!-- CV -->
     <section id="cv" class="py-20 bg-slate-50">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
             <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Curriculum Vitae (CV)</h2>
-                <p class="text-slate-600">Riwayat pendidikan serta keahlian profesional yang saya miliki.</p>
+                <h2 class="text-3xl font-bold text-slate-900">Curriculum Vitae</h2>
             </div>
-
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Pendidikan -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
-                    <h3 class="text-xl font-semibold text-slate-900 flex items-center gap-2.5">
-                        <i class="fa-solid fa-graduation-cap text-indigo-600"></i> Riwayat Pendidikan
-                    </h3>
-                    <div class="space-y-6 border-l-2 border-indigo-100 pl-4 ml-2">
-                        <div class="space-y-1 relative">
-                            <div class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-indigo-600"></div>
-                            <h4 class="font-semibold text-slate-800">SMKN 42 Jakarta</h4>
-                            <p class="text-sm text-indigo-600 font-medium">Manajemen Perkantoran (Siswa Aktif)</p>
-                        </div>
-                        <div class="space-y-1 relative">
-                            <div class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-indigo-300"></div>
-                            <h4 class="font-semibold text-slate-800">SMP Darul Izzah</h4>
-                            <p class="text-sm text-slate-500 font-medium">Alumni</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Keterampilan -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
-                    <h3 class="text-xl font-semibold text-slate-900 flex items-center gap-2.5">
-                        <i class="fa-solid fa-lightbulb text-indigo-600"></i> Keterampilan (Skills)
-                    </h3>
-                    <div class="flex flex-wrap gap-2.5">
-                        <span class="px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-medium">Manajemen & Administrasi Perkantoran (Pengarsipan & Surat-menyurat)</span>
-                        <span class="px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-medium">Public Speaking & Seni Pertunjukan (Puisi & Pidato)</span>
-                        <span class="px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-medium">Kepemimpinan & Manajemen Organisasi</span>
-                        <span class="px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-medium">Kedisiplinan & Kerja Sama Tim</span>
-                        <span class="px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-medium">Olahraga Bela Diri (Pencak Silat)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Hasil Karya & Prestasi Section -->
-    <section id="prestasi" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6 space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Hasil Karya & Prestasi</h2>
-                <p class="text-slate-600">Pencapaian serta penghargaan utama dalam bidang seni, sastra, dan public speaking.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Prestasi 1 -->
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">🥇</div>
-                    <h3 class="font-bold text-slate-900">Juara 1 Lomba Baca Puisi (Offline)</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Penghargaan atas kemampuan penghayatan, olah vokal, dan penjiwaan ekspresi seni secara langsung di atas panggung.</p>
-                </div>
-                <!-- Prestasi 2 -->
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold">🏆</div>
-                    <h3 class="font-bold text-slate-900">Juara 1 Lomba Baca Puisi (Online)</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Pencapaian dalam menyampaikan estetika sastra dan ekspresi emosional secara optimal melalui media digital.</p>
-                </div>
-                <!-- Prestasi 3 -->
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold">🎖️</div>
-                    <h3 class="font-bold text-slate-900">Juara Harapan 1 Lomba Pidato</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Prestasi dalam bidang public speaking, penyampaian ide gagasan secara terstruktur, dan kemampuan persuasi di depan umum.</p>
-                </div>
-                <!-- Prestasi 4 -->
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-600 flex items-center justify-center text-xl font-bold">🏆</div>
-                    <h3 class="font-bold text-slate-900">Juara 1 Fashion Show (Antar-RW)</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Menunjukkan rasa percaya diri, kreativitas gaya berbusana, dan penampilan publik di lingkungan masyarakat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Galeri Foto & Video Section -->
-    <section id="galeri" class="py-20 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-6 space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Galeri Foto & Dokumentasi</h2>
-                <p class="text-slate-600">Dokumentasi kegiatan organisasi, pencak silat, OSIS, serta momen perlombaan.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- 1. Silat APSN 1 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1T5wRrrbfIERKIvH1MY2R4VYNazAObCeA=s800" alt="Pencak Silat APSN" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Dokumentasi Foto Bersama Pencak Silat APSN (1)</div>
-                </div>
-
-                <!-- 2. Silat APSN 2 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1MHLP3pNP_cO3wdqz21CMiAznMw8KDjXE=s800" alt="Pencak Silat APSN" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Dokumentasi Foto Bersama Pencak Silat APSN (2)</div>
-                </div>
-
-                <!-- 3. Silat APSN 3 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1xShev3wrznotrr45YnbX3kZWinib9c_a=s800" alt="Pencak Silat APSN" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Dokumentasi Foto Bersama Pencak Silat APSN (3)</div>
-                </div>
-
-                <!-- 4. Sparing -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1I1xLyw3gG-Wj32StR_cjv9g0UNSn4Csi=s800" alt="Sparing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Sparing Pencak Silat</div>
-                </div>
-
-                <!-- 5. Eskul SMKN 42 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1CsJnnX73MaXPgFlLUf9uGkbH8isCV0Cl=s800" alt="Eskul Silat SMKN 42" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Dokumentasi Eskul Pencak Silat SMKN 42</div>
-                </div>
-
-                <!-- 6. OSIS 1 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1B6a_kY1SGoJDKrhJJ0MRvg2X_e3hcAvO=s800" alt="OSIS" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">Dokumentasi OSIS (1)</div>
-                </div>
-
-                <!-- 7. OSIS 2 -->
-                <div class="rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100 group">
-                    <div class="h-64 overflow-hidden bg-slate-200">
-                        <img src="https://lh3.googleusercontent.com/d/1cdRrZSUCjT93bGfN1rbarfhHn09LsSqe=s800" alt="OSIS" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-4 text-sm font-medium text-slate-700 text-center">
+                <div class
